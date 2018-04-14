@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="../static/materialize.min.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="../static/socket.io.min.js"></script>
+    <script src="../static/jquery.min.js"></script>
+    <script src="../static/materialize.min.js"></script>
+    <script src="../static/modalF.js"></script>
+    <script src="../static/script.js" charset="utf-8"></script>
+    <title>Chat Salon</title>
+
+</head>
+
+<body>
+    <div class="row" id="sec1">
+        <div id="sec2" class="col m6 s8 l4 white offset-l4 offset-m3 offset-s2 z-depth-2">
+            <div class="center">
+                <h4>Chat Salon - Iniciar chat</h4>
+            </div>
+            <form id="iniciar" class="center">
+                <div class="row">
+                    <div class="btn-profesor">
+                        <input id="profesor" type="text" class="center" placeholder="Profesor" required>
+                        <input id="imagen" type="file" class="center">
+                    </div>
+                </div>
+                <div class="row">
+                    <select id="fil" class="browser-default">
+                        <option value="" disabled selected>Filas</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <select id="col" class="browser-default">
+                        <option value="" disabled selected>Columnas</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col l12 m12 s12 center">
+                        <button type="submit" class="btn red" m-open="canvas">Entrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="m-modal" m-modal="canvas">
+        <div class="m-body" id="canvas"></div>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+Hecho por:
+    Jose Altamar
+    Rubén Carrascal
+Software para redes | chat usando socket 
+-->

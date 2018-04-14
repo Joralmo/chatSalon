@@ -1,0 +1,323 @@
+/* Hecho por:
+    Jose Altamar
+    Rubén Carrascal
+Software para redes | chat usando socket  */
+
+.btn-profesor, .btn-estudiante, .btn-puerto{
+    float: left;
+    width: 100%;
+}
+#profesor, #estudiante, #puerto{
+    text-align: left;
+}
+input[type="color"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: white;
+    border: none;
+}
+#sec1{
+    margin-top: 15vh;
+}
+#sec2{
+    border-radius: 1%;
+    padding: 3rem;
+}
+form {
+    padding: 5px;
+}
+#myChart{
+    margin-left: calc(50% - 200px);
+    width: 400px !important;
+    height: 400px !important;;
+}
+.m-body{
+    width: 60%;
+    margin: auto;
+    color: white;
+    margin-top: 10vh;
+}
+.m-body > h3{
+    margin-top: 45vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+#agregarRespuesta{
+    margin-left: 7px;
+}
+#resEncuesta, #guardarEncuesta, #agregarRespuesta{
+    border: 0;
+    cursor: pointer;
+    height: 30px;
+    width: 140px;
+    background-color: #f39c12;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+.m-modal {
+    display: none;
+}
+canvas {
+    cursor: none;
+}
+body{
+    background: #007696;
+}
+.usuariosChatContenedor {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    height: auto;
+    position: relative;
+}
+.usuariosConectados {
+    overflow: hidden;
+    min-width: 69%;
+    min-height: 553px;
+}
+.chat {
+    flex: 3;
+    background: white;
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: 465px;
+}
+.usuario {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 6px;
+    background-color: #2ecc71;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.btn-floating{
+    width: 55.5px;
+    height: 55.5px;
+    background-color: #F44336;
+    border-radius: 50%;
+}
+.btn-floating.btn-large i {
+    line-height: 55.5px;
+}
+.btn-large i{
+    font-size: 1.6rem;
+}
+.btn-floating i {
+    width: inherit;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+}
+.btn-large{
+    line-height: 54px;
+}
+.waves-effect{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    will-change: opacity, transform;
+}
+.profesorContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+.message {
+    border-bottom: 1px solid #b3b3b3;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+.message .usuarioNombre {
+    font-size: .8em;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+.message .usuarioNombre > .foto{
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background: #41ae60;
+    border-radius: 50%;
+    margin-right: 3px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.mensaje-center{
+    text-align: center;
+}
+.message .texto::first-letter{
+    text-transform: uppercase;
+}
+.message .texto {
+    font-size: .95em;
+    text-align: right;
+    margin-bottom: 5px;
+}
+.usuairoContenido {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.usuairoContenido .foto {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background-color: #27ae60;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.usuairoContenido span {
+    font-size: .8em;
+    text-transform: capitalize;
+}
+.container{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 10vh;
+    margin-top: -10px;
+}
+.barra-m{
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    position: absolute;
+}
+.barra-m > #mensaje, #pregunta{
+    height: 60px;
+    width: 55.8%;
+    border-radius: 6px;
+    padding-left: 7px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: sans-serif;
+    border: none;
+    margin-left: 6px;
+    margin-right: 10px;
+}.m-body > h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+#respuestas {width: 102%;}
+#respuestas > input{
+    border: 0;
+    margin-left: 7px;
+    margin-top: 7px;
+    border-radius: 6px;
+    padding-left: 7px;
+    height: 30px;
+    width: 48%;
+    color: black;
+}
+#cerrarSesion{
+    bottom: 14vh;
+}
+#pregunta{
+    width: 100%;
+}
+.barra-m > #mensaje:first-letter {text-transform:uppercase;}
+.barra-m > #enviar{
+    cursor: pointer;
+    width: 61px;
+    height: 60px;
+    padding: 0 !important;
+    margin-right: 7px;
+    border-radius: 6px;
+    background: #2ecc71;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.barra-m > #encuesta{
+    cursor: pointer;
+    border: none;
+    height: 60px;
+    background: #FFC107;
+    width: 31%;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+canvas{
+    padding: 10px;
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.2);
+    height: 712px;
+    background: white;
+}
+*{
+    font-family: sans-serif;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
