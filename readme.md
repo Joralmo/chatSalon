@@ -26,6 +26,11 @@ Debemos entrar a la carpeta clonada del proyecto.
   source chat/bin/activate
   ```
 
+- Instalar las dependencias necesarias para poder ejecutar el proyecto
+  ```python
+  pip install -r requirements.txt
+  ```
+
 En el archivo `run.py` está especificado el host y el puerto donde vá a correr la aplicación.
 
 Luego de configurado el archivo que por defecto tiene localhost y puerto 7000 corremos el comando `python run.py` y vamos al navegador en `http://localhost:7000`
