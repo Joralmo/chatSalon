@@ -16,7 +16,7 @@ Debemos entrar a la carpeta clonada del proyecto.
   pip install virtualenv
   ```
   
-- Crear un entorno virual
+- Crear un entorno virtual
   ```python
   virtualenv chat
   ```
